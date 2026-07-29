@@ -24,7 +24,13 @@ body{
 
     font-family:Arial, Helvetica, sans-serif;
 
-    color:#333;
+    font-size:14px;
+
+    line-height:1.5;
+
+    letter-spacing:1.5px;
+
+    color:#828282;
 
     padding-top:50px;
 
@@ -784,6 +790,21 @@ src="https://64.media.tumblr.com/7c02e4cf3a50898d41afec0a448b77b3/b5db4e9ead4a7e
 
 <div id="sobre" class="pagina">
 
+
+<h1>Inicio</h1>
+
+<p>
+Un pequeño archivo personal hecho con cariño.
+</p>
+
+<p>
+Gracias por pasar por aquí ♡
+</p>
+
+</div>
+
+<div id="sobre" class="pagina" style="display:none;">
+
 <h1>Sobre mí</h1>
 
 <p>
@@ -879,6 +900,8 @@ document.getElementById("menu").classList.toggle("activo");
     function entrarBlog(){
 
     document.getElementById("bienvenida").style.display="none";
+
+    mostrar("inicio");
 
 }
 
