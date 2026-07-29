@@ -493,6 +493,95 @@ body{
 
 }
 
+    /* ------------------------- */
+/* BIENVENIDA */
+/* ------------------------- */
+
+#bienvenida{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#FADADD;
+    z-index:999;
+
+}
+
+.welcome-box{
+
+    width:90%;
+    max-width:500px;
+
+    background:white;
+    background-image:url("https://foollovers.com/mat/dot/n17-bg-polkadot.gif");
+
+    padding:40px;
+
+    border-radius:8px;
+
+    text-align:center;
+
+}
+
+.welcome-box h1{
+
+    font-size:36px;
+    margin-bottom:20px;
+
+}
+
+.welcome-box p{
+
+    line-height:1.8;
+    margin-bottom:30px;
+
+}
+
+.welcome-box button{
+
+    padding:12px 35px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#ffd1e2;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.welcome-box button:hover{
+
+    background:#ffc0d7;
+
+}
+
+@media(max-width:700px){
+
+    .welcome-box{
+
+        width:92%;
+        padding:30px 20px;
+
+    }
+
+    .welcome-box h1{
+
+        font-size:30px;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -501,6 +590,26 @@ body{
 
 <body>
 
+
+    <!-- Pantalla de bienvenida -->
+<div id="bienvenida">
+
+    <div class="welcome-box">
+
+        <h1>¡Bienvenido!</h1>
+
+        <p>
+            Gracias por visitar mi pequeño rincón de Internet.
+            Espero que disfrutes tu estancia. ♡
+        </p>
+
+        <button onclick="entrarBlog()">
+            Entrar
+        </button>
+
+    </div>
+
+</div>
 
 
 <div class="mobile-header">
@@ -657,6 +766,12 @@ document.getElementById("menu").classList.toggle("activo");
 
 }
 
+
+    function entrarBlog(){
+
+    document.getElementById("bienvenida").style.display="none";
+
+}
 
 
 </script>
