@@ -493,7 +493,7 @@ body{
 
 }
 
-    /* ------------------------- */
+/* ------------------------- */
 /* BIENVENIDA */
 /* ------------------------- */
 
@@ -506,77 +506,134 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:#FADADD;
+    background:#f8dbe4;
+    background-image:
+    linear-gradient(rgba(255,235,243,.45),rgba(255,235,243,.45));
+
     z-index:999;
 
 }
 
-.welcome-box{
+#welcome-container{
 
     width:90%;
-    max-width:500px;
+    max-width:700px;
 
-    background:white;
-    background-image:url("https://foollovers.com/mat/dot/n17-bg-polkadot.gif");
+    background:#fffafc;
 
-    padding:40px;
+    border:4px ridge #e8c4d2;
 
-    border-radius:8px;
+}
+
+#welcome-header{
+
+    background:#efbfd0;
+
+    border-bottom:4px ridge #e8c4d2;
+
+    padding:15px;
+
+    text-align:center;
+
+    font-family:Tahoma, Geneva, sans-serif;
+
+    font-size:20px;
+
+    color:#6d4960;
+
+}
+
+#welcome-content{
+
+    padding:35px;
 
     text-align:center;
 
 }
 
-.welcome-box h1{
+#welcome-content h1{
 
-    font-size:36px;
-    margin-bottom:20px;
+    margin:0 0 20px;
+
+    font-family:Tahoma, Geneva, sans-serif;
+
+    font-size:40px;
+
+    color:#b05f85;
 
 }
 
-.welcome-box p{
+#welcome-content p{
+
+    margin:15px 0;
 
     line-height:1.8;
-    margin-bottom:30px;
 
 }
 
-.welcome-box button{
+#entrar{
 
-    padding:12px 35px;
+    display:inline-block;
 
-    border:none;
+    margin-top:28px;
 
-    border-radius:8px;
+    font-size:24px;
 
-    background:#ffd1e2;
+    font-family:Tahoma, Geneva, sans-serif;
 
-    cursor:pointer;
+    color:#9b4f73;
 
-    font-size:18px;
-
-    transition:.3s;
+    text-decoration:none;
 
 }
 
-.welcome-box button:hover{
+#entrar:hover{
 
-    background:#ffc0d7;
+    text-decoration:underline;
+
+    background:rgba(255,221,235,.6);
+
+}
+
+#welcome-footer{
+
+    padding:12px;
+
+    text-align:center;
+
+    font-size:.85em;
+
+    color:#8d7380;
+
+    border-top:4px ridge #e8c4d2;
+
+    background:#fff4f8;
 
 }
 
 @media(max-width:700px){
 
-    .welcome-box{
+    #welcome-container{
 
-        width:92%;
-        padding:30px 20px;
+        width:95%;
 
     }
 
-    .welcome-box h1{
+    #welcome-content{
+
+        padding:25px;
+
+    }
+
+    #welcome-content h1{
 
         font-size:30px;
+
+    }
+
+    #entrar{
+
+        font-size:22px;
 
     }
 
@@ -594,18 +651,33 @@ body{
     <!-- Pantalla de bienvenida -->
 <div id="bienvenida">
 
-    <div class="welcome-box">
+    <div id="welcome-container">
 
-        <h1>¡Bienvenido!</h1>
+        <div id="welcome-header">
+            Bienvenido
+        </div>
 
-        <p>
+        <div id="welcome-content">
+
+            <h1>¡Bienvenid@ a mi blog!</h1>
+
+            <p>
+                Todavía no está terminado, pero puedes echar un vistazo.
+            </p>
+
+            <p>
+                Espero que disfrutes tu visita.
+            </p>
+
+            <a href="#" id="entrar" onclick="entrarBlog(); return false;">
+                Entrar
+            </a>
+
+        </div>
+
+        <div id="welcome-footer">
             Gracias por visitar mi pequeño rincón de Internet.
-            Espero que disfrutes tu estancia. ♡
-        </p>
-
-        <button onclick="entrarBlog()">
-            Entrar
-        </button>
+        </div>
 
     </div>
 
