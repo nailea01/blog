@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Blog</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+    min-height:100vh;
+
+    background:#FADADD;
+
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding-top:40px;
+
+}
+
+
+/* Contenedor de los dos cuadros */
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    width:100%;
+
+    max-width:1000px;
+
+}
+
+
+/* Cuadro izquierdo */
+
+.sidebar{
+
+    width:140px;
+    height:490px;
+
+    padding:8px;
+
+    background:white;
+    background-image:url("https://foollovers.com/mat/dot/n17-bg-polkadot.gif");
+
+    border-radius:3px;
+}
+
+
+/* Foto pequeña */
+
+.profile{
+
+    width:100%;
+    height:120px;
+
+    background-image:url("https://hanniballs.neocities.org/images/assets/rila.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    border-radius:3px;
+}
+
+
+
+/* Botones */
+
+.nav-btn{
+
+    width:100%;
+    margin-top:12px;
+
+    padding:12px;
+
+    border:none;
+    border-radius:8px;
+
+    background:white;
+
+    color:#333;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.nav-btn:hover{
+
+    background:#ffd1e2;
+
+}
+
+
+/* Cuadro derecho */
+
+.content{
+
+    width:470px;
+
+    height:490px;
+
+
+    background:white;
+
+
+    border-radius:3px;
+
+}
+
+
+/* Texto */
+
+.content h1{
+
+    margin-bottom:15px;
+
+}
+
+
+.content p{
+
+    line-height:1.8;
+
+}
+
+
+
+/* Animación */
+
+.pagina{
+
+    animation:entrada .3s;
+
+}
+
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+        transform:translateY(10px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Adaptación para celulares */
+
+@media (max-width:700px){
+
+    body{
+        padding:20px;
+    }
+
+
+    .container{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    .sidebar{
+
+        width:90%;
+
+        height:auto;
+
+        min-height:300px;
+
+    }
+
+
+    .profile{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+
+    .content{
+
+        width:90%;
+
+        height:500px;
+
+    }
+
+
+    .nav-btn{
+
+        font-size:14px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<img src="https://64.media.tumblr.com/7c02e4cf3a50898d41afec0a448b77b3/b5db4e9ead4a7e5a-23/s640x960/bdd745ed4687ba56f5e3d26b2f983b44a080f986.pnj" style="position:absolute;width:130px;bottom:50px;right:250px;z-index:1;">
+
+<div class="container">
+
+
+    <!-- PANEL IZQUIERDO -->
+
+    <aside class="sidebar">
+
+
+        <div class="profile"></div>
+
+
+        <button class="nav-btn" onclick="mostrar('sobre')">
+            Sobre mí
+        </button>
+
+
+        <button class="nav-btn" onclick="mostrar('articulos')">
+            Artículos
+        </button>
+
+
+        <button class="nav-btn" onclick="mostrar('fotos')">
+            Fotos
+        </button>
+
+
+        <button class="nav-btn" onclick="mostrar('notas')">
+            Notas
+        </button>
+
+
+    </aside>
+
+
+
+    <!-- PANEL DERECHO -->
+
+
+    <main class="content">
+
+
+        <div id="sobre" class="pagina">
+
+            <h1>Sobre mí</h1>
+
+            <p>
+            Escribe aquí tu presentación, información personal o cualquier cosa que quieras compartir.
+            </p>
+
+        </div>
+
+
+
+        <div id="articulos" class="pagina" style="display:none;">
+
+            <h1>Artículos</h1>
+
+            <p>
+            Aquí puedes poner tus publicaciones o textos largos.
+            </p>
+
+        </div>
+
+
+
+
+        <div id="fotos" class="pagina" style="display:none;">
+
+            <h1>Fotos</h1>
+
+            <p>
+            Aquí puedes agregar una galería de imágenes.
+            </p>
+
+        </div>
+
+
+
+
+        <div id="notas" class="pagina" style="display:none;">
+
+            <h1>Notas</h1>
+
+            <p>
+            Aquí puedes escribir pequeñas notas o ideas.
+            </p>
+
+        </div>
+
+
+
+    </main>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function mostrar(id){
+
+
+    let paginas = document.querySelectorAll(".pagina");
+
+
+    paginas.forEach(function(pagina){
+
+        pagina.style.display="none";
+
+    });
+
+
+
+    document.getElementById(id).style.display="block";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
