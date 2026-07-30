@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mi Blog</title>
+<title>Blog</title>
 
 <style>
 
@@ -17,7 +17,6 @@
 }
 
 body{
-
     min-height:100vh;
     background:#FADADD;
     font-family:Arial, Helvetica, sans-serif;
@@ -26,7 +25,6 @@ body{
     letter-spacing:1.5px;
     color:#828282;
     padding-top:50px;
-
 }
 
 
@@ -34,12 +32,10 @@ body{
 /* Imagen decorativa */
 
 .decoracion{
-
     position:absolute;
     width:130px;
     bottom:50px;
     right:250px;
-
 }
 
 
@@ -47,13 +43,11 @@ body{
 /* Contenedor */
 
 .container{
-
     display:flex;
     gap: 10px;
     width:620px;
     max-width:100%;
     margin:0 auto;
-
 }
 
 
@@ -61,7 +55,6 @@ body{
 /* Menu */
 
 .sidebar{
-
     width:140px;
     height:490px;
     padding:8px;
@@ -69,7 +62,6 @@ body{
     background-image:url("https://foollovers.com/mat/dot/n17-bg-polkadot.gif");
     border-radius:3px;
     flex-shrink:0;
-
 }
 
 
@@ -77,14 +69,12 @@ body{
 /* Foto PC */
 
 .profile{
-
     width:120px;
     height:120px;
     background-image:url("https://hanniballs.neocities.org/images/assets/rila.jpg");
     background-size:cover;
     background-position:center;
     border-radius:3px;
-
 }
 
 
@@ -92,7 +82,6 @@ body{
 /* Botones estilo Neocities */
 
 .nav-btn{
-
     display:block;
     width:100%;
     margin-bottom:4px;
@@ -109,16 +98,13 @@ body{
     text-align:left;
     cursor:pointer;
     transition:0.3s ease-in-out;
-
 }
 
 
 .nav-btn:hover{
-
     background:#fdefe0;
     border-left:5px solid #F58427;
     color:#F58427;
-
 }
 
 
@@ -126,18 +112,15 @@ body{
 /* Contenido */
 
 .content{
-
     width:470px;
     height:490px;
     background:white;
     padding:20px;
     border-radius:3px;
     flex-shrink:0;
-
 }
 
 .bigtitle{
-
     font-family:Arial, Helvetica, sans-serif;
     font-size:18px;
     text-transform:uppercase;
@@ -147,29 +130,22 @@ body{
     padding-bottom:5px;
     color:#828282;
     letter-spacing:2px;
-
 }
 
 .pagina{
-
     animation:entrada .3s;
-
 }
 
 
 
 .content h1{
-
     margin-bottom:15px;
-
 }
 
 
 
 .content p{
-
     line-height:1.8;
-
 }
 
 
@@ -220,8 +196,6 @@ body{
 }
 
 
-
-
 /* Barra superior */
 
 .mobile-header{
@@ -256,9 +230,6 @@ body{
 }
 
 
-
-
-
 /* Flecha */
 
 .menu-arrow{
@@ -287,13 +258,14 @@ body{
     position:fixed;
     top:0;
     left:-280px;
-    width:250px;
+    width:280px;
     height:100vh;
     padding:20px;
     transform:none;
     transition:.35s;
     z-index:100;
     overflow-y:auto;
+    border-radius:0 35px 35px 0;
 }
 
 
@@ -373,140 +345,88 @@ body{
 
     position:fixed;
     inset:0;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:#f8dbe4;
     background-image:
     linear-gradient(rgba(255,235,243,.45),rgba(255,235,243,.45));
-
     z-index:999;
-
 }
 
 #welcome-container{
-
     width:90%;
     max-width:700px;
-
     background:#fffafc;
-
     border:4px ridge #e8c4d2;
-
 }
 
 #welcome-header{
-
     background:#efbfd0;
-
     border-bottom:4px ridge #e8c4d2;
-
     padding:15px;
-
     text-align:center;
-
     font-family:Tahoma, Geneva, sans-serif;
-
     font-size:20px;
-
     color:#6d4960;
-
 }
 
 #welcome-content{
-
     padding:35px;
-
     text-align:center;
-
 }
 
 #welcome-content h1{
-
     margin:0 0 20px;
-
     font-family:Tahoma, Geneva, sans-serif;
-
     font-size:40px;
-
     color:#b05f85;
-
 }
 
 #welcome-content p{
-
     margin:15px 0;
-
     line-height:1.8;
-
 }
 
 #entrar{
-
     display:inline-block;
-
     margin-top:28px;
-
     font-size:24px;
-
     font-family:Tahoma, Geneva, sans-serif;
-
     color:#9b4f73;
-
     text-decoration:none;
-
 }
 
 #entrar:hover{
-
     text-decoration:underline;
-
     background:rgba(255,221,235,.6);
-
 }
 
 #welcome-footer{
-
     padding:12px;
-
     text-align:center;
-
     font-size:.85em;
-
     color:#8d7380;
-
     border-top:4px ridge #e8c4d2;
-
     background:#fff4f8;
-
 }
 
 @media(max-width:700px){
 
     #welcome-container{
-
-        width:95%;
-
+       width:95%;
     }
 
     #welcome-content{
-
-        padding:25px;
-
+       padding:25px;
     }
 
     #welcome-content h1{
-
         font-size:30px;
-
     }
 
     #entrar{
-
         font-size:22px;
-
     }
 
 }
