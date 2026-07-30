@@ -166,21 +166,6 @@ body{
 
 
 
-/* Elementos móviles */
-
-.mobile-header{
-    display:none;
-}
-
-
-.menu-arrow{
-    display:none;
-}
-
-
-
-
-
 /* ------------------------- */
 /* VERSION CELULAR */
 /* ------------------------- */
@@ -189,44 +174,26 @@ body{
 @media(max-width:700px){
 
 
-body{
-    padding:0;
-    padding-top:80px;
-    justify-content:center;
-}
-
-
-/* Barra superior */
-
-.mobile-header{
-    display:flex;
+.mobile-banner{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:70px;
-    background:white;
-    align-items:center;
-    padding:10px;
-    justify-content:center;
-    gap:0;
+    height:120px;
     z-index:30;
-    background:white;
-    background-image:url("https://foollovers.com/mat/dot/n17-bg-polkadot.gif");
-    box-shadow:0 2px 5px rgba(0,0,0,.15);
-    border-radius:0 0 15px 15px;
 }
 
-
-
-.mobile-photo{
-    display:none;
+.mobile-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-
-
-.mobile-header h2{
-    font-size:24px;
+body{
+    padding:0;
+    padding-top:120px;
+    justify-content:center;
 }
 
 
@@ -447,6 +414,11 @@ body{
 
 <body>
 
+<div class="mobile-banner">
+    <img src="https://i.pinimg.com/736x/fd/bf/85/fdbf856d389b45f59547d06e1b581974.jpg" alt="Banner">
+</div>
+
+    
     <div class="overlay" onclick="abrirMenu()"></div>
 
     <!-- Pantalla de bienvenida -->
@@ -483,16 +455,6 @@ body{
     </div>
 
 </div>
-
-
-<div class="mobile-header">
-
-    <div class="mobile-photo"></div>
-
-    <h2>Blog</h2>
-
-</div>
-
 
 
 <div class="menu-arrow" onclick="abrirMenu()">
