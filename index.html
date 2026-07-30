@@ -389,8 +389,12 @@ body{
 @media(max-width:700px){
 
     #welcome-container{
-       width:95%;
-    }
+    position:relative;
+    width:90%;
+    max-width:700px;
+    background:#fffafc;
+    border:4px ridge #e8c4d2;
+}
 
     #welcome-content{
        padding:25px;
@@ -404,6 +408,14 @@ body{
         font-size:22px;
     }
 
+}
+
+.welcome-deco{
+    position:absolute;
+    width:80px;
+    top:-25px;
+    left:-25px;
+    z-index:10;
 }
 
 </style>
@@ -425,6 +437,8 @@ body{
 <div id="bienvenida">
 
     <div id="welcome-container">
+
+         <img class="welcome-deco"src="https://i.imgur.com/IwhbkAN.png">
 
         <div id="welcome-header">
             Bienvenido
