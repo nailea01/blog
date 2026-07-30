@@ -321,8 +321,9 @@ body{
 
     padding:10px;
 
+    justify-content:center;
 
-    gap:12px;
+    gap:0;
 
 
     z-index:30;
@@ -341,26 +342,7 @@ body{
 
 
 .mobile-photo{
-
-
-    width:50px;
-
-
-    height:50px;
-
-
-    border-radius:50%;
-
-
-    background-image:url("https://hanniballs.neocities.org/images/assets/rila.jpg");
-
-
-    background-size:cover;
-
-
-    background-position:center;
-
-
+    display:none;
 }
 
 
@@ -378,49 +360,23 @@ body{
 /* Flecha */
 
 .menu-arrow{
-
-
+    
     display:flex;
-
-
     position:fixed;
-
-
-    left:0;
-
-
+    left:12px;
     top:50%;
-
-
     transform:translateY(-50%);
-
-
-    width:35px;
-
-
-    height:60px;
-
-
+    width:42px;
+    height:65px;
     background:white;
-
-
-    border-radius:0 15px 15px 0;
-
-
+    color:#F58427;
+    border-radius:18px;
     justify-content:center;
-
-
     align-items:center;
-
-
-    font-size:25px;
-
-
+    font-size:28px;
     cursor:pointer;
-
-
-    z-index:40;
-
+    z-index:120;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 
 }
 
@@ -432,34 +388,16 @@ body{
 
 .sidebar{
 
-
     position:fixed;
-
-
-    left:-160px;
-
-
-    top:50%;
-
-
-    transform:translateY(-50%);
-
-
-    width:140px;
-
-
-    height:auto;
-
-
-    min-height:230px;
-
-
-    transition:.4s;
-
-
-    z-index:35;
-
-
+    top:0;
+    left:-280px;
+    width:250px;
+    height:100vh;
+    padding:20px;
+    transform:none;
+    transition:.35s;
+    z-index:100;
+    overflow-y:auto;
 }
 
 
@@ -469,18 +407,32 @@ body{
 .sidebar.activo{
 
 
-    left:10px;
+    left:0;
 
 
 }
 
 
 
-/* Oculta foto del menu */
+/* Foto del menu */
 
 .profile{
 
-    display:none;
+    display:block;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    margin:10px auto 25px;
+
+    background-image:url("https://hanniballs.neocities.org/images/assets/rila.jpg");
+
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -530,7 +482,32 @@ body{
 
 }
 
+.overlay{
 
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:90;
+
+}
+
+.overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+    
 
 }
 
@@ -688,6 +665,7 @@ body{
 
 <body>
 
+    <div class="overlay" onclick="abrirMenu()"></div>
 
     <!-- Pantalla de bienvenida -->
 <div id="bienvenida">
@@ -890,9 +868,9 @@ document.getElementById(id).style.display="block";
 
 function abrirMenu(){
 
+    document.getElementById("menu").classList.toggle("activo");
 
-document.getElementById("menu").classList.toggle("activo");
-
+    document.querySelector(".overlay").classList.toggle("activo");
 
 }
 
